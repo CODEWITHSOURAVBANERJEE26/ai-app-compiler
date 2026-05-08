@@ -104,6 +104,7 @@ Build CRM with login dashboard analytics payments
 }
 
 
-## **Live Demo**
+## Live Demo
+--Search it on web
 
 https://ai-app-compiler-jtfxtttfxcqknccagwystm.streamlit.app/
