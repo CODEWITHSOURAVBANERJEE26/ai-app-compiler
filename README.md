@@ -2,23 +2,42 @@
 
 ## Overview
 
-This project converts natural language prompts into structured application architectures using AI.
+AI Application Compiler is an AI-powered orchestration system that converts natural language prompts into structured application architectures.
+
+The system uses a multi-stage AI pipeline to:
+- extract application intent
+- generate system architecture
+- validate generated structure
+- repair missing components automatically
+
+The final output is returned as structured JSON.
+
+---
 
 ## Features
 
-- Intent extraction
-- System generation
-- Validation engine
-- Repair engine
-- Structured JSON output
+- Intent Extraction
+- System Architecture Generation
+- Validation Engine
+- Automatic Repair Engine
+- Structured JSON Output
+- Streamlit Web Interface
+- Groq LLM Integration
+- Multi-stage AI Orchestration Pipeline
+
+---
 
 ## Tech Stack
 
 - Python
+- Streamlit
 - Groq API
 - JSON
+- python-dotenv
 
-## Pipeline
+---
+
+## Architecture Pipeline
 
 User Input
 → Intent Extraction
@@ -27,10 +46,59 @@ User Input
 → Repair
 → Final Output
 
+---
+
+## Project Files
+
+### main.py
+
+Contains the original terminal-based orchestration pipeline.
+
+### app.py
+
+Contains the deployed Streamlit web application interface.
+
+### requirements.txt
+
+Contains all required Python dependencies.
+
+### README.md
+
+Project documentation and setup instructions.
+
+---
+
 ## Example Prompt
 
 Build CRM with login dashboard analytics payments
 
-## Run Project
+---
 
-python main.py
+## Example Output
+
+```json
+{
+  "ui": {
+    "pages": [
+      "login",
+      "dashboard"
+    ]
+  },
+  "api": {
+    "routes": [
+      "/login",
+      "/dashboard"
+    ]
+  },
+  "db": {
+    "tables": [
+      "users"
+    ]
+  },
+  "auth": {
+    "roles": [
+      "admin",
+      "user"
+    ]
+  }
+}
